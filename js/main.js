@@ -60,3 +60,18 @@ if(age>=18) {
 } else {
     document.writeln("You are still a minor!<br>");
 }
+
+let evaluateGrd=(grade)=> {
+    if(grade=="") alert("You need to enter a number to evaluate");
+    else if(isNaN(grade)) alert("That is not a number");
+    else if(grade>100) alert("Oh, that is Beyond Expectations. No one gets that far.");
+    else if(grade>=90 && grade <=100) alert("Outstanding");
+    else if(grade>=85 && grade<=89) alert("Very Satisfactory");
+    else if(grade>=80 && grade<=84) alert("Satisfactory");
+    else if(grade>=75 && grade<=79) alert("Fairly Satisfactory");
+    else if(grade>=0 && grade<75) alert("Did not meet expectations");
+    else if(grade<0) alert("Did not meet expectations");
+    else {
+
+    }
+}
