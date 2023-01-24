@@ -27,6 +27,26 @@
         <input id="grd">
         <br>
         <button onclick="evaluateGrd(document.getElementById('grd').value)">Evaluate</button>
+        <h1>Basic Calculator</h1>
+        <input type="number" id="input1">
+        <input type="number" id="input2">
+        <select id="operator">
+            <option>Addition</option>
+            <option>Subtraction</option>
+            <option>Multiplication</option>
+            <option>Division</option>
+        </select>
+        <button onclick="calculate()">Calculate</button>
+        <input type="text" id="text" value="">
+        <h1>Fruit Selector</h1>
+        <select id="fruitContainer">
+            <option>Grapes</option>
+            <option>Orange</option>
+            <option>Apple</option>
+            <option>Strawberry</option>
+        </select>
+        <button onclick="fruitSelector()">Select Fruit</button>
+        <div id="selectedFruit"></div>
     </body>
     <script src="js/main.js"></script>
 </html>

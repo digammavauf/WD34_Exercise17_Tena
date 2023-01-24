@@ -70,8 +70,81 @@ let evaluateGrd=(grade)=> {
     else if(grade>=80 && grade<=84) alert("Satisfactory");
     else if(grade>=75 && grade<=79) alert("Fairly Satisfactory");
     else if(grade>=0 && grade<75) alert("Did not meet expectations");
-    else if(grade<0) alert("Did not meet expectations");
-    else {
+    else alert("Ooops! Did you intentionally enter a negative grade?");
+}
 
+document.writeln("<br>");
+
+let calculate=()=>{
+    let i = Number(document.getElementById("input1").value);
+    let j = Number(document.getElementById("input2").value);
+    let o = document.getElementById("operator").value;
+    let r = 0; let text = "";
+    /* if(o=="Addition") {
+        r = i + j;
+        text = i+" + "+j+" = "+r;
+    } else if(o=="Subtraction") {
+        r = i - j;
+        text = i+" - "+j+" = "+r;
+    } else if(o=="Multiplication") {
+        r = i * j;
+        text = i+" * "+j+" = "+r;
+    } else if(o=="Division") {
+        r = i / j;
+        text = i+" / "+j+" = "+r;
+    } */
+    switch(o) {
+        case "Addition":
+            r = i + j;
+            text = i+" + "+j+" = "+r;
+            break;
+        case "Subtraction":
+            r = i - j;
+            text = i+" - "+j+" = "+r;
+            break;
+        case "Multiplication":
+            r = i * j;
+            text = i+" * "+j+" = "+r;
+            break;
+        case "Division":
+            r = i / j;
+            text = i+" / "+j+" = "+r;
+            break;
+        default:
+            //something that is not expected
     }
+    document.getElementById("text").value = text;
+}
+
+let fruitSelector=()=>{
+    let f = document.getElementById("fruitContainer").value;
+    text = "";
+    /* if (f=="Grapes") {
+        text = "Wow, you selected "+f;
+    } else if (f=="Orage") {
+        text = "Wow, you selected "+f;
+    } else if (f=="Apple") {
+        text = "Wow, you selected "+f;
+    } else if (f=="Strawberry") {
+        text = "Wow, you selected "+f;
+    } else {
+        text = "You selected nothing";
+    } */
+    switch(f) {
+        case "Grapes":
+            text = "Wow, you selected "+f;
+            break;
+        case "Orage":
+            text = "Wow, you selected "+f;
+            break;
+        case "Apple":
+            text = "Wow, you selected "+f;
+            break;
+        case "Strawberry":
+            text = "Wow, you selected "+f;
+            break;
+        default:
+            //something that is not expected
+    }
+    document.getElementById("selectedFruit").innerHTML = text;
 }
